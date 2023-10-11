@@ -1,10 +1,9 @@
 # Django Rest Framework Tutorials
 
-## 1. Serializers and Serializations
 
-### Python Json : Python has a built-in package called json, which can be used to work with JSON data.
+## Python Json : Python has a built-in package called json, which can be used to work with JSON data.
 
-Python Json has 2 methods: dumps() and loads() for serialization and deserialization respectively.
+#### Python Json has 2 methods: dumps() and loads() for serialization and deserialization respectively.
 
 ##### dumps() : Take a Python object, and convert it to a JSON string
 
@@ -38,3 +37,6 @@ print(python_dict)
 
 Output: {'name': 'David', 'age': 6, 'class': 'I'}
 ```
+
+
+### Serializers : In DRF, serializers are used to convert complex data such as QuerySets and model instances to native Python DataTypes that can then be easily rendered into JSON, XML or other content types which is understandable by the Frontend.
