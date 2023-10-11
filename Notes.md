@@ -47,3 +47,22 @@ Output: {'name': 'David', 'age': 6, 'class': 'I'}
 #### Serialization
 ##### Serializer Class: A serializer class is very similar to a Django Form and ModelForm, and includes similar validation flags on the various fields, such as required, max_length and default.
 ##### DRF provides a Serializer class which gives you a powerful, generic way to control the output of your responses.
+
+
+#### How to create a Serializer Class?
+
+##### 1. Create a serializers.py file to write all serializers.
+
+##### 2. Import serializers from rest_framework.
+
+```python
+from rest_framework import serializers
+
+
+class StudentSerializer(serializers.Serializer):
+    name = serializers.CharField(max_length=100)
+    roll = serializers.IntegerField()
+    city = serializers.CharField(max_length=100)
+ 
+
+```
