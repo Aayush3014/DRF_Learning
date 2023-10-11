@@ -6,7 +6,7 @@ from rest_framework.renderers import JSONRenderer
 # Create your views here.
 
 # Model Object - Single Student Data
-
+# This is for model instance
 
 def student_detail(request, pk):
 
@@ -16,6 +16,26 @@ def student_detail(request, pk):
     
     # Convert Model instance to python native datatype (dict)
     serializer = StudentSerializer(stu)
+    print(serializer)
+    print(serializer.data)
+
+    # Convert python native datatype (dict) to Json
+    json_data = JSONRenderer().render(serializer.data)
+    print(json_data)
+    return HttpResponse(json_data, content_type="application/json")
+
+
+
+# This is for Queryset : All Student Data
+
+def student_list(request):
+
+    # Model instance (stu)
+    stu = Student.objects.all()
+    print(stu)
+    
+    # Convert Model instance to python native datatype (dict)
+    serializer = StudentSerializer(stu, many=True)
     print(serializer)
     print(serializer.data)
 
