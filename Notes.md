@@ -8,5 +8,11 @@ Python Json has 2 methods: dumps() and loads()
 
 dumps() : Take a Python object, and convert it to a JSON string
 
+```python
+import json
+python_dict = {"name": "David", "age": 6, "class": "I"}
+json_string = json.dumps(python_dict)
+print(json_string)```
+
 loads() : Take a JSON string, and convert it to a Python object
 
