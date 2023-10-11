@@ -71,3 +71,9 @@ class StudentSerializer(serializers.Serializer):
 ### Serialization example 
 
 ![Screenshot from 2023-10-11 19-41-30](https://github.com/Aayush3014/DRF_Learning/assets/83333424/68b99dc3-f367-4ca0-aab5-c7a5f2d8d0f0)
+
+
+
+### JsonResponse
+
+![Screenshot from 2023-10-11 21-30-27](https://github.com/Aayush3014/DRF_Learning/assets/83333424/6e136c13-af05-4e8c-a9a4-07899ebd3553)
