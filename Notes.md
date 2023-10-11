@@ -40,3 +40,10 @@ Output: {'name': 'David', 'age': 6, 'class': 'I'}
 
 
 ### Serializers : In DRF, serializers are used to convert complex data such as QuerySets and model instances to native Python DataTypes that can then be easily rendered into JSON, XML or other content types which is understandable by the Frontend.
+
+#### Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
+
+
+#### Serialization
+##### Serializer Class: A serializer class is very similar to a Django Form and ModelForm, and includes similar validation flags on the various fields, such as required, max_length and default.
+##### DRF provides a Serializer class which gives you a powerful, generic way to control the output of your responses.
