@@ -66,3 +66,6 @@ class StudentSerializer(serializers.Serializer):
  
 
 ```
+
+
+file:///home/ayush/Pictures/Screenshots/Screenshot%20from%202023-10-11%2019-30-49.png
