@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from DRF_APP.models import Student
 from DRF_APP.serializers import StudentSerializer
 from rest_framework.renderers import JSONRenderer
@@ -16,13 +16,19 @@ def student_detail(request, pk):
     
     # Convert Model instance to python native datatype (dict)
     serializer = StudentSerializer(stu)
-    print(serializer)
-    print(serializer.data)
+    # print(serializer)
+    # print(serializer.data)
 
     # Convert python native datatype (dict) to Json
     json_data = JSONRenderer().render(serializer.data)
-    print(json_data)
+    # print(json_data)
     return HttpResponse(json_data, content_type="application/json")
+    
+
+    # This JsonResponse can be used instead of Line 23 and 25.
+    # This will run on (safe=True) because it is a single object which is in dict format.
+
+    # return JsonResponse(serializer.data)
 
 
 
@@ -43,3 +49,10 @@ def student_list(request):
     json_data = JSONRenderer().render(serializer.data)
     print(json_data)
     return HttpResponse(json_data, content_type="application/json")
+
+
+
+    # This JsonResponse can be used instead of Line 49 and 51.
+    # This will not run on safe=True because it is a queryset which is in list format.
+
+    # return JsonResponse(serializer.data)
